@@ -9,12 +9,12 @@ pipeline {
         stage('Read pom') {
             steps {
                 echo "Reading pom.xml"
-                script {
-                    def text = new XmlSlurper().parse(new File("pom.xml")).version.text()
-                    echo "text ${text}"
-                }
-//                pom = readMavenPom file 'pom.xml'
-//                echo "version ${pom.version}"
+//                script {
+//                    def text = new XmlSlurper().parse(new File("pom.xml")).version.text()
+//                    echo "text ${text}"
+//                }
+                pom = readMavenPom file 'pom.xml'
+                echo "version ${pom.version}"
             }
         }
         stage('mvn') {
