@@ -13,8 +13,11 @@ pipeline {
 //                    def text = new XmlSlurper().parse(new File("pom.xml")).version.text()
 //                    echo "text ${text}"
 //                }
-                pom = readMavenPom file 'pom.xml'
-                echo "version ${pom.version}"
+                script {
+                    pom = readMavenPom file 'pom.xml'
+                    echo "version ${pom.version}"
+                }
+
             }
         }
         stage('mvn') {
