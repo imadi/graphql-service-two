@@ -12,4 +12,16 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            slackSend channel: '#update',
+                    color: 'good',
+                    message: "Release, success: ${currentBuild.fullDisplayName}."
+        }
+        failure {
+            slackSend channel: '#update',
+                    color: 'danger',
+                    message: "Release, FAILED: ${currentBuild.fullDisplayName}."
+        }
+    }
 }
