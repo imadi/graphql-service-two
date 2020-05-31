@@ -8,7 +8,9 @@ pipeline {
         }
         stage('mvn') {
             stages {
-                sh 'mvn -version'
+                steps {
+                    sh 'mvn -version'
+                }
             }
         }
     }
