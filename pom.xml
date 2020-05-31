@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.adi</groupId>
     <artifactId>grahql-service-two</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>grahql-service-two</name>
     <description>Demo project for Spring Boot</description>
 
@@ -43,7 +43,7 @@
         <dependency>
             <groupId>com.graphql-java</groupId>
             <artifactId>graphql-java-spring-boot-starter-webflux</artifactId>
-            <version>1.0</version>
+            <version>2019-06-24T11-47-27-31ab4f9</version>
         </dependency>
         <dependency>
             <groupId>com.graphql-java</groupId>
