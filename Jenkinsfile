@@ -6,5 +6,10 @@ pipeline {
                 echo "Hello"
             }
         }
+        stage('mvn') {
+            stages {
+                sh 'mvn -version'
+            }
+        }
     }
 }
